@@ -4,5 +4,31 @@
 
 .App .navbar-brand {
   font-weight: bold;
-  color: #96E6B3;
+}
+
+.navbarItems {
+  color: #999;
+}
+
+/* unvisited link */
+.navbarItems:link {
+  text-decoration: none;
+}
+
+/* visited link */
+.navbarItems:visited {
+  text-decoration: none;
+  color: #999;
+}
+
+/* mouse over link */
+.navbarItems:hover {
+  text-decoration: none;
+  color: #2d2d2d;
+}
+
+/* selected link */
+.navbarItems:active {
+  text-decoration: none;
+  color: #2d2d2d;
 }
