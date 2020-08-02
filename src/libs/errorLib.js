@@ -6,5 +6,5 @@ export function onError(error) {
       message = error.message;
     }
   
-    alert(message);
+    alert(error.name + ': ' + message);
 }

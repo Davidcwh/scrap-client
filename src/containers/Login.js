@@ -32,7 +32,13 @@ export default function Login() {
       userHasAuthenticated(true);
       history.push("/");
     } catch (e) {
-      onError(e);
+      if(e.name === 'UserNotConfirmedException' && e.message === 'User is not confirmed.') {
+        alert('The account with this email is not verified yet. Please sign up again and verify the account immediately after signing up.');
+        history.push("/signup");
+      } else {
+        onError(e);
+      }
+
       setIsLoading(false);
     }
   }
