@@ -8,6 +8,8 @@ import NotFound from "./containers/NotFound";
 import NewNote from "./containers/NewNote";
 import Notes from "./containers/Notes";
 import Settings from "./containers/Settings";
+import AuthenticatedRoute from "./components/AuthenticatedRoute";
+import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
 
 function Routes() {
   return (
@@ -16,25 +18,25 @@ function Routes() {
         <Home />
       </Route>
 
-      <Route exact path="/login">
+      <UnauthenticatedRoute exact path="/login">
         <Login />
-      </Route>
+      </UnauthenticatedRoute>
 
-      <Route exact path="/signup">
+      <UnauthenticatedRoute exact path="/signup">
         <Signup />
-      </Route>
+      </UnauthenticatedRoute>
 
-      <Route exact path="/settings">
+      <AuthenticatedRoute exact path="/settings">
         <Settings />
-      </Route>
+      </AuthenticatedRoute>
 
-      <Route exact path="/notes/new">
+      <AuthenticatedRoute exact path="/notes/new">
         <NewNote />
-      </Route>
-
-      <Route exact path="/notes/:id">
+      </AuthenticatedRoute>
+      
+      <AuthenticatedRoute exact path="/notes/:id">
         <Notes />
-      </Route>
+      </AuthenticatedRoute>
 
       <Route>
         <NotFound />

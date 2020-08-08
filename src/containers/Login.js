@@ -30,7 +30,6 @@ export default function Login() {
     try {
       await Auth.signIn(fields.email, fields.password);
       userHasAuthenticated(true);
-      history.push("/");
     } catch (e) {
       if(e.name === 'UserNotConfirmedException' && e.message === 'User is not confirmed.') {
         alert('The account with this email is not verified yet. Please sign up again and verify the account immediately after signing up.');
