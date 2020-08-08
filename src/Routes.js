@@ -5,6 +5,8 @@ import Home from "./containers/Home";
 import Login from "./containers/Login";
 import Signup from "./containers/Signup";
 import NotFound from "./containers/NotFound";
+import NewNote from "./containers/NewNote";
+import Notes from "./containers/Notes";
 
 function Routes() {
   return (
@@ -19,6 +21,14 @@ function Routes() {
 
       <Route exact path="/signup">
         <Signup />
+      </Route>
+
+      <Route exact path="/notes/new">
+        <NewNote />
+      </Route>
+
+      <Route exact path="/notes/:id">
+        <Notes />
       </Route>
 
       <Route>

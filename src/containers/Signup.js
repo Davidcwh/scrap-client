@@ -82,6 +82,7 @@ export default function Signup() {
       userHasAuthenticated(true);
       history.push("/");
     } catch (e) {
+      // Handling case where confirmed user tries to sign up
       if(e.name === 'NotAuthorizedException' && e.message === 'User cannot be confirmed. Current status is CONFIRMED') {
         alert('An account already exists with this email. Please login instead.');
         history.push("/login");
