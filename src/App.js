@@ -52,7 +52,12 @@ function App() {
           <Nav pullRight>
             {
               isAuthenticated
-              ? <NavItem onClick={handleLogout}>Logout</NavItem>
+              ? <>
+              <NavItem>
+                <NavLink to='/settings' className='navbarItems' activeStyle={{ color:'black' }}>Settings</NavLink>
+              </NavItem>
+              <NavItem onClick={handleLogout}>Logout</NavItem>
+              </>
               : <>
               <NavItem>
                 <NavLink to='/signup' className='navbarItems' activeStyle={{ color:'black' }}>Signup</NavLink>

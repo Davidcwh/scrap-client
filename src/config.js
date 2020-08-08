@@ -1,5 +1,6 @@
 export default {
     MAX_ATTACHMENT_SIZE: 5000000,
+    STRIPE_KEY: "pk_test_51H94UbB5Bf6QdkILPFUx10IQpnWsJSTfMndLdCHZOpt4JtimrUsH2PROMmndzIxBOdJBYySKV4SDntaU6Pq125kO00RNZaMAcn",
     s3: {
       REGION: "us-east-1",
       BUCKET: "scrap-uploads"
